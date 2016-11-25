@@ -16,7 +16,8 @@ void print_hash_values()
 {
     u8 bits = 3;
     int num_buckets = (1<<bits);
-    for(int i=0; i<num_buckets; ++i) {
+    int i = 0;
+    for(i=0; i<num_buckets; ++i) {
         printf("hash_min(%d)=%d\n", i, hash_min(i, bits));
     }
 }
@@ -149,7 +150,8 @@ void hashtable_show_buckets()
     // }
 
     // show hashtable buckets
-    for (int i = 0; i < HASH_SIZE(htable); ++i)
+    int i=0;
+    for (i = 0; i < HASH_SIZE(htable); ++i)
     {
         if (!hlist_empty(&htable[i]))
         {
